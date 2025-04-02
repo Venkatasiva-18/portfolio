@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text animate-fade-in">
+                <h1>Hi, I'm <span class="highlight" style="white-space: nowrap;">VENKATA SIVA RAGALA</span></h1>
+                <h2>I'm a <span id="role-text"></span></h2>
+                <p>Creating beautiful and functional websites</p>
+                <a href="#contact" class="cta-button">Get in Touch</a>
+            </div>
+            <div class="hero-image animate-slide-in">
+                <img src="images/image2.png" alt="Profile Image" class="profile-image">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <div class="title-border"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+            
+                    <div class="about-paragraphs">
+                           <p class="animate-text">I am a passionate web developer with expertise in creating modern and responsive websites. I love turning complex problems into simple, beautiful, and intuitive solutions.</p>
+                        <p class="animate-text">When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying outdoor activities.</p>
+                        <p class="animate-text">Currently, I'm focused on expanding my skills in web development and building more projects to enhance my portfolio.</p>
+                    </div>
+
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">1</span>
+                            <span class="stat-label">Project</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Languages</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="images/project1.png" alt="SkillCraft Platform">
+                <h3>SkillCraft</h3>
+                <p>Role: Developer in a group project<br>
+                A comprehensive e-learning platform featuring live doubt resolution and interactive mind games. Built with self-paced learning capabilities and engaging educational content. As a developer, I contributed to the core functionality and user interface implementation.</p>
+                <div class="project-tech">
+                    <span>Java</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="images/python-project.png" alt="Python Project">
+                <h3>Python Data Analysis Tool</h3>
+                <p>A personal project showcasing my Python expertise. Developed a data analysis tool that processes and visualizes complex datasets, featuring interactive charts and automated report generation. Built using pandas, matplotlib, and other Python libraries.</p>
+                <div class="project-tech">
+                    <span>Python</span>
+                    <span>Pandas</span>
+                    <span>Matplotlib</span>
+                    <span>Data Analysis</span>
+                </div>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+            <!-- <div class="project-card">
+                <img src="images/java-project.png" alt="Java Project">
+                <h3>Java Task Management System</h3>
+                <p>A robust desktop application built with Java, featuring task organization, priority management, and deadline tracking. Implemented using object-oriented principles and Java Swing for the GUI. Includes data persistence and user authentication features.</p>
+                <div class="project-tech">
+                    <span>Java</span>
+                    <span>Java Swing</span>
+                    <span>SQLite</span>
+                    <span>OOP</span>
+                </div>
+                <a href="#" class="project-link">View Project</a>
+            </div> -->
+            
+            <!-- <div class="project-card">
+                <img src="images/ml-project.png" alt="Machine Learning Project">
+                <h3>Machine Learning Project (In Progress)</h3>
+                <p>An individual project where I'm developing a machine learning model to enhance learning experiences and predict student performance patterns. This project demonstrates my ability to work independently on complex AI solutions, focusing on creating personalized learning paths and improving educational outcomes.</p>
+                <div class="project-tech">
+                    <span>Python</span>
+                    <span>Machine Learning</span>
+                    <span>Data Analysis</span>
+                </div>
+                <a href="#" class="project-link">Coming Soon</a>
+            </div> -->
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="90">
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span class="skill-name">Java</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85">
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span class="skill-name">DSA</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="70">
+                                <span class="skill-percentage">65%</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Web Development</h3>
+                <ul>
+                    <li class="skill-item">
+                        <span class="skill-name">HTML5</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="30">
+                                <span class="skill-percentage">30%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span class="skill-name">CSS3</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="20">
+                                <span class="skill-percentage">20%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="20">
+                                <span class="skill-percentage">20%</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div class="skill-category">
+                <h3>Frameworks</h3>
+                <ul>
+                    <li class="skill-item">
+                        <span class="skill-name">React</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="25">
+                                <span class="skill-percentage">25%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span class="skill-name">Node.js</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="20">
+                                <span class="skill-percentage">20%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span class="skill-name">Spring Boot</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="30">
+                                <span class="skill-percentage">30%</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div> -->
+            <div class="skill-category">
+                <h3>Soft Skills</h3>
+                <ul class="soft-skills-list">
+                    <li class="soft-skill-item">
+                        <i class="fas fa-users"></i>
+                        <span>Leadership</span>
+                    </li>
+                    <li class="soft-skill-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Problem Solving</span>
+                    </li>
+                    <li class="soft-skill-item">
+                        <i class="fas fa-star"></i>
+                        <span>Motivation</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-content">
+            <form class="contact-form" id="contactForm" action="https://formsubmit.co/venkatasivaragala@gmail.com" method="POST">
+                <legend>Let's Work Together</legend>
+                <div class="form-group">
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    <span class="focus-border"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    <span class="focus-border"></span>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                    <span class="focus-border"></span>
+                </div>
+                <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="thanks.html">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_autoresponse" value="Thank you for your message! I will get back to you soon.">
+                <button type="submit" class="submit-button">
+                    <span>Send Message</span>
+                    <div class="button-border"></div>
+                </button>
+            </form>
+            <div class="social-links">
+                <a href="https://github.com/Venkatasiva-18"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/venkata-siva-ragala-b90166291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+                
+                <a href="https://www.instagram.com/venkata_siva_ragala?igsh=MW9ka2w2Nmo2azA3Nw=="><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Venkata siva Ragala. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

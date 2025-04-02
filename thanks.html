@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Message Received</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .thank-you-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+
+        .thank-you-icon {
+            font-size: 5rem;
+            color: #00b4db;
+            margin-bottom: 2rem;
+            animation: bounce 2s infinite;
+        }
+
+        .thank-you-message {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .thank-you-message h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #00b4db;
+        }
+
+        .thank-you-message p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .back-home {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #00b4db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .back-home:hover {
+            background: #0088a9;
+            transform: translateY(-2px);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .thank-you-message h1 {
+                font-size: 2rem;
+            }
+            .thank-you-message p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <i class="fas fa-check-circle thank-you-icon"></i>
+        <div class="thank-you-message">
+            <h1>Thank You!</h1>
+            <p>Your message has been successfully sent. I appreciate you taking the time to reach out. I will get back to you as soon as possible.</p>
+            <p>In the meantime, feel free to connect with me on my social media platforms.</p>
+            <a href="index.html" class="back-home">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html> 
