@@ -5,7 +5,7 @@ const roles = [
     "Web Developer",
     "UI Designer",
     "Problem Solver",
-    "Tech Enthusiast"
+    "Tech Enthusiast",
 ];
 
 console.log('Roles array initialized:', roles);
@@ -54,39 +54,52 @@ const animateSkillBars = (entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             const progressBar = entry.target;
-            const progress = progressBar.getAttribute('data-progress');
-            progressBar.style.width = `${progress}%`;
+            const targetProgress = parseInt(progressBar.getAttribute('data-progress'));
             
-            // Animate the percentage text
+            // Ensure the progress bar starts at 0
+            progressBar.style.width = '0%';
+            
+            // Force a reflow
+            progressBar.offsetWidth;
+            
+            // Animate to target width
+            setTimeout(() => {
+                progressBar.style.width = `${targetProgress}%`;
+            }, 100);
+            
+            // Animate percentage counter
             const percentageText = progressBar.querySelector('.skill-percentage');
             let currentProgress = 0;
-            const targetProgress = parseInt(progress);
             const duration = 1000; // 1 second
-            const interval = 20; // Update every 20ms
+            const interval = 16; // ~60fps
             const steps = duration / interval;
             const increment = targetProgress / steps;
 
-            const animatePercentage = () => {
-                currentProgress += increment;
-                if (currentProgress >= targetProgress) {
-                    currentProgress = targetProgress;
-                }
-                percentageText.textContent = `${Math.round(currentProgress)}%`;
+            const updatePercentage = () => {
                 if (currentProgress < targetProgress) {
-                    setTimeout(animatePercentage, interval);
+                    currentProgress = Math.min(currentProgress + increment, targetProgress);
+                    percentageText.textContent = `${Math.round(currentProgress)}%`;
+                    requestAnimationFrame(() => setTimeout(updatePercentage, interval));
                 }
             };
 
-            animatePercentage();
+            updatePercentage();
+            
+            // Unobserve after animation is complete
+            observer.unobserve(entry.target);
         }
     });
 };
 
+// Create intersection observer
 const observer = new IntersectionObserver(animateSkillBars, {
-    threshold: 0.5
+    threshold: 0.2, // Trigger earlier
+    rootMargin: '50px' // Start animation before the element is fully in view
 });
 
+// Initialize skill bars
 skillBars.forEach(bar => {
+    bar.style.width = '0%';
     observer.observe(bar);
 });
 
