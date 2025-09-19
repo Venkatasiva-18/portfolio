@@ -224,8 +224,8 @@ nav {
     width: 100%;
     max-width: 500px;
     height: auto;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-radius: 250px;
+    box-shadow: 0 10px 50px rgba(0,0,0,0.2);
     animation: float 6s ease-in-out infinite;
     transition: transform 0.3s ease;
 }

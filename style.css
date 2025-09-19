@@ -1,0 +1,19 @@
+#nav-bar{
+    background-color: lightgrey;
+    display: flex;
+    height: 60px;
+
+}
+a
+{
+    text-decoration: none;
+}
+.nav
+{
+position: top-right;
+margin-top: 30px;
+padding: auto;
+background-color: blue;
+color: white;
+
+}
